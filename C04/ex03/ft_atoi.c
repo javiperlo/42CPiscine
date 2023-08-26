@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 20:39:31 by javperez          #+#    #+#             */
-/*   Updated: 2023/08/26 23:05:04 by javperez         ###   ########.fr       */
+/*   Updated: 2023/08/26 23:08:29 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(char *str)
 
 	result = 0;
 	sign_count = 0;
-	sign = 0;
+	sign = 1;
 	while (*str == ' ' || *str == '\t' || *str == '\r')
 		str ++;
 	while (*str == '-' || *str == '+')
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 }
 int main()
 {
-	char str[] = "--+---+--1 234ab567";
+	char str[] = "--1 234ab567";
 	int		val;
 
 	val = ft_atoi(str);
